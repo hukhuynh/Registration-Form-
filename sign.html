@@ -1,0 +1,189 @@
+<!doctype html>
+
+<!--
+ Filename: sign.html						
+ Written by: Huukiet Kevin Huynh			
+ Purpose: 						
+ Modification History:
+ 29 Nov 2016 - Original Build	
+ 30 Nov 2016 -Added widgets and validation
+ 5 Dec 2016 - Added extra <p>						
+ -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+		
+		<title>Collabowrite</title>
+	
+		
+    	<link rel="stylesheet" href="../css/final.css">
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="../jquery-ui-1.12.1.custom/jquery-ui.min.css">
+	<script src="../jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+	<script src="../jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../dist/jquery.validate.js"></script>
+	<script src="../js/final.js"></script>
+	<script src="../js/final_2.js"></script>
+	
+		
+
+</head>
+
+<body>
+	<header>
+		<h1 class = "title">Collabowrite</h1>
+		
+		<nav>
+			<a href = "stories.html*">Stories</a>
+			<a href = "discussion.html">Discussion</a>
+			<a href = "faq.html*">FAQ</a>
+			<a href = "contact.html">Contact Information</a>
+		</nav>
+	</header>
+<h2>Sign Up!</h2>
+<div id="container">
+	<form id="whole"><!--form to contain accordion widget-->
+		<div id = "target">
+			
+			
+			<h3>Optional</h3>
+			<div class = "sub">
+				<p>Date of Birth</p>
+					<input type="text" id="date" class="reset"><!--uses datepicker widget-->
+				<br>
+				<br>
+				<br>
+				<p>Gender</p><!--radio buttons-->
+				<div id="set">
+					<input type = "radio" id="b1" name="gender" value="Male">
+						<label for="b1">Male</label>
+
+					<input type="radio" id="b2" name="gender" value="Female">
+						<label for="b2">Female</label>
+					
+				</div>
+				
+				<p>City</p>
+					<input type="text" name="city" id="City" class="reset">
+				<p>State</p>
+					<div class="aCompleteWidget"><!--autocomplete textfield-->
+						<input name="state" id="states" class="reset" placeholder="Indiana, Florida, etc">
+					</div>
+
+			
+
+					<p>Check genres you prefer</p>
+
+					<table><!--table for checkboxes-->
+						
+						<tr>
+							<td><label for="horror"> <input type="checkbox" id="horror"
+							value="Horror" name="genre">Horror</label></td>
+
+							<td><label for="fiction"> <input type="checkbox" id="fiction"
+							value="Fiction" name="genre">Fiction</label></td>
+
+							<td><label for="nonFiction"> <input type="checkbox" id="nonFiction"
+							value="Non-Fiction" name="genre">Non-Fiction</label></td>
+
+							<td><label for="fantasy"> <input type="checkbox" id="fantasy"
+							value="Fantasy" name="genre">Fantasy</label></td>
+
+							<td><label for="epic"> <input type="checkbox" id="epic"
+							value="Epic" name="genre">Epic</label></td>
+							
+							<td><label for="drama"> <input type="checkbox" id="drama"
+							value="Drama" name="genre">Drama</label></td>
+						</tr>
+						<tr>
+
+							<td><label for="shortStory"> <input type="checkbox" id="shortStory"
+							value="Short Story" name="genre">Short Story</label></td>
+
+							<td><label for="mystery"> <input type="checkbox" id="mystery"
+							value="Mystery" name="genre">Mystery</label></td>
+
+							<td><label for="kids"> <input type="checkbox" id="kids"
+							value="Kids" name="genre">Kids</label></td>
+
+							<td><label for="romance"> <input type="checkbox" id="romance"
+							value="Romance" name="genre">Romance</label></td>
+
+							<td><label for="poetry"> <input type="checkbox" id="poetry"
+							value="Poetry" name="genre">Poetry</label></td>
+
+							<td><label for="sciFi"> <input type="checkbox" id="sciFi"
+							value="Sci-Fi" name="genre">Science Fiction</label></td>
+						</tr>
+					</table>
+
+				<div id="spin"><!--Spinner widget-->
+					<p>How many books do you guess you have read?</p>
+					<input type="text" id="spinner_1" value="0">
+				</div>
+			
+
+			</div>
+
+			<h3>Required</h3>
+			<div class = "sub">
+				
+				<p>First Name</p>
+					<input type = "text" name = "firstName" class = "reset" id="fName" placeholder="Santa">
+				<p>Last Name</p>
+					<input type = "text" name = "lastName" class="reset" id="lName" placeholder="Claus">
+
+				<p>Email</p>
+					<input type = "email" name = "email" class="reset" id="Email" placeholder="example@yahoo.com">
+				<p>Phone Number</p>
+					<input type="tel" name="phoneNum" class="reset" id="phone" placeholder="317-333-4444">
+				<p>User Name</p>
+					<input type = "text" name = "username" class="reset" id="userName" placeholder="SanClaus">
+				<p>Password</p>
+					<input type = "password" name = "password" class="reset" id="passWord1" >
+				<p>Confirm Password</p>
+					<input type = "password" name = "confirmPassword" class="reset" id="passWord2">
+			</div>
+			</div>
+			<br>
+			
+			<input type="submit" value="Submit" id="submit"><!--Submit button style is missing when accessed from Safari-->
+			
+			<button id = "Refresh" onClick="window.location.reload()">Refresh</button><!--refresh button-->
+
+			</form>
+	
+
+
+
+<!--All input echoes out here after form is hidden-->	
+	<div id="output">
+		<p id="outname"></p>
+		<p id= "outemail"></p>
+		<p id= "outphone"></p>
+		<p id= "outusername"></p>
+		<p id= "outpassword"></p>
+		<p id= "outdob"></p>
+		<p id= "outgender"></p>
+		<p id= "outcity"></p>
+		<p id= "outstate"></p>
+		<p id= "outbooks"></p>
+	
+	</div>
+
+</div>
+
+	<footer>"Write drunk;Edit Sober" - Ernest Hemingway</footer>
+
+
+
+
+
+	
+</body>
+
+</html>

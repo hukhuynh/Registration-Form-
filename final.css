@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+}
+body{
+	background-color:#691111;
+}
+
+#container{
+	width: 960px;
+	margin:auto;
+}
+
+header,footer{
+	background: #504257;
+	padding: 10px 20px;
+	
+}
+
+h2{
+	text-align:center;
+	font-size: 30px;
+	color: #d04343;
+}
+
+nav a{
+	text-decoration:none;
+	margin: 0px 8px;
+}
+
+
+h1{
+	font-size:38px;
+	font-weight:normal;
+	font-family: "Lucida Console",Monospace;
+	color:#d04343;
+	
+}
+
+a:link{
+	color:#d04343;
+}
+
+
+footer{
+	
+	text-align:center;
+	margin-top:150px;
+	color:#d04343;
+}
+
+#main, #writer{
+	float: left;
+	width: 250px;
+	min-height: 450px;
+	
+}
+
+#main{
+	width:250px;
+	}
+
+
+#writer{
+	width:750px;
+		
+}
+
+#signUpButton,#signInButton,#Refresh,#submit{
+	border-radius:4px;
+	padding: 12px 28px;
+	font-style:italics;
+}
+
+#buttons{
+	width: 120%;
+	margin:auto;
+
+}
+.title{
+	font-size: 80px;
+}
+
